@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Social Links</title>
+    <style>
+        .logo {
+            position: fixed; /* Change to fixed to keep it in place */
+            top: 0;
+            left: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            object-fit: cover; /* Cover the entire area */
+            z-index: -1; /* Keep it behind other content */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(logo.mp4) auto;
+            margin: 0; /* Remove default margin */
+        }
+        .container {
+            text-align: center;
+            background-image: url(link.mp4);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 90%; /* Limit max width */
+            width: 400px; /* Set a base width */
+        }
+        .container:hover{
+            border: solid 1px black;
+            box-shadow: blue;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 16px;
+            color: gray;
+        }
+        .links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .link-box {
+            width: 150px;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background 0.3s;
+            color: white;
+        }
+        .twitter { background: #1DA1F2; }
+        .twitter:hover{
+            border: 1px solid black;
+        }
+        .linkedin { background: #0077b5; }
+        .linkedin:hover{
+            border: 1px solid black;
+        }
+        .github { background: #333; }
+        .linkedin:hover{
+            border: 1px solid black;
+        }
+
+        .instagram { background: #E1306C; }
+        .instagram:hover{
+            border: 1px solid black;
+        }
+
+        .website{
+            background: #007bff;
+        }
+        .website:hover{
+            border: 1px solid black;
+        }
+
+        .website1 { background:rgb(9, 215, 78);}
+        .website1:hover{
+            border: 1px solid black;
+        }
+
+        .website2{
+            background: chocolate;
+        }
+        .website2:hover{
+            border: 1px solid black;     
+        }
+        
+        .website3 {
+            background: blueviolet;
+        }
+
+        .website3:hover{
+            border: 1px solid black;
+        }
+
+        .website4{
+            background: yellow;
+        }
+        .website4:hover{
+            border: 1px solid black;
+        }
+        .link-box a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .add-link {
+            margin-top: 20px;
+        }
+        .add-link a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+        .add-link a:hover { background: #218838; }
+        .modal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 90%; /* Limit max width */
+            width: 400px; /* Set a base width */
+        }
+        .modal input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .modal button {
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+                /* Media Queries for Responsiveness */
+                @media (max-width: 600px) {
+                    .link-box {
+                        width: 100%; /* Full width on small screens */
+                        margin: 5px 0; /* Adjust margin */
+                    }
+                    .container {
+                        padding: 10px; /* Reduce padding */
+                    }
+                    h1 {
+                        font-size: 20px; /* Adjust font size */
+                    }
+                    p {
+                        font-size: 14px; /* Adjust font size */
+                    }
+                }    
+    </style>
+</head>
+<body>
+    <video class="logo" autoplay loop muted>
+        <source src="link.mp4">
+    </video>
+    <div class="container">
+        <h1>jeel suthar</h1>
+        <p>Welcome to my social links page!</p>
+        <div class="links" id="links">
+           <div class="link-box twitter"><a href="https://jeel-wb.github.io/portfolio/" id="twitter-link" onclick="verifyHuman(event, 'twitter-link')">Protfolio</a></div>
+            <div class="link-box instagram"><a href="https://www.instagram.com/_jeel_07/?igsh=NTc4MTIwNjQ2YQ%3D%3D" id="instagram-link" onclick="verifyHuman(event, 'instagram-link')">Instagram</a></div>
+            <div class="link-box linkedin"><a href="https://www.linkedin.com/in/suthar-zeel-4b4a892bb/" id="linkedin-link" onclick="verifyHuman(event, 'linkedin-link')">LinkedIn</a></div>
+            <div class="link-box github"><a href="https://github.com/Jeelsuthar/Web-Technology-with-UI-UX" id="github-link" onclick="verifyHuman(event, 'github-link')">GitHub</a></div>
+            <div class="link-box website"><a href="https://jeel-wb.github.io/Achivment/" id="website-link" onclick="verifyHuman(event, 'website-link')">Achivament</a></div><br><br>
+          <div class="links" id="links">
+            <h1>Live demo web:-</h1><br><br><br>
+              <div class="link-box website1"><a href="https://jeel-wb.github.io/solidwaste-mangment/" id="website-link" onclick="verifyHuman(event, 'website-link')">Solidwaste</a></div>
+              <div class="link-box website2"><a href="https://jeel-wb.github.io/Zero-west/" id="website-link" onclick="verifyHuman(event, 'website-link')">Zero-West-Grocery-Store</a></div>
+              <div class="link-box website3"><a href="https://jeel-wb.github.io/link/" id="website-link" onclick="verifyHuman(event, 'website-link')">Social-Links</a></div>
+              <div class="link-box website4"><a href="https://jeel-wb.github.io/eco-reward/" id="website-link" onclick="verifyHuman(event, 'website-link')">Eco-Reward</a></div>
+         </div>
+        </div>
+    </div>
+</body>
+</html>
